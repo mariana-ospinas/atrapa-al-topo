@@ -20,5 +20,15 @@ cuadrado.forEach (identificador => {
       puntaje.textContent = resultado;
       posiciontopo = null;
     }
-  })
-})
+  });
+});
+
+function movertopo (){
+  tiempoanual--;
+  tiempofaltante.textContent = tiempoactual;
+  if (tiempoactual=== 0){
+    clearInterval(idtiempo);
+    clearInterval(tiempotopo);
+    alert("se acabó el tiempo tu puntaje fue" + resultado + "topos atrapdos");
+  }
+}
